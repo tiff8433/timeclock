@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Time Clock</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
+    <script src="app.js" async></script>
+  </head>
+  <body>
+    <div id="clock">
+      <span id="date"></span><br />
+      <span id="time"></span>
+    </div>
+    <form name="timeclock" >
+      <input type="number" name="employee_id" class="form-control" placeholder="Employee ID"/>
+      <button class="btn btn-success" type="button" onclick="sendData('clockin')"><i class="clockin material-icons" >play_arrow</i>  Clock In </button>
+      <button class="btn btn-warning" type="button" onclick="sendData('begin lunch')"><i class="begin-lunch material-icons" >pause_circle_outline</i>  Start Lunch </button>
+      <button class="btn btn-warning" type="button" onclick="sendData('end lunch')"><i class="end-lunch material-icons" >pause_circle_filled</i>  End Lunch</button>
+      <button class="btn btn-danger" type="button" onclick="sendData('clock out')"><i class="clockout material-icons" >stop</i>  Clock Out </button>
+    </form>
+
+    <div class="message">
+
+    </div>
+
+  </body>
+
+</html>
